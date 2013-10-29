@@ -44,6 +44,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -188,6 +190,39 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AXMBSBIDA.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AXMBSBIDA.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AXMBSBIDA.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AXMBSBIDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AXMBSBIDA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AXMBSBIDA.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CUSTINVOICEJOUR.cs">
+      <DependentUpon>AXMBSBIDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CUSTINVOICETRAN.cs">
+      <DependentUpon>AXMBSBIDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CUSTTABLE.cs">
+      <DependentUpon>AXMBSBIDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DATAAREA.cs">
+      <DependentUpon>AXMBSBIDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MBSBDSALESREPTABLE.cs">
+      <DependentUpon>AXMBSBIDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MBSWBWEBUSERCONTACT.cs">
+      <DependentUpon>AXMBSBIDA.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -247,6 +282,23 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <EntityDeploy Include="Models\AXMBSBIDA.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AXMBSBIDA.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AXMBSBIDA.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AXMBSBIDA.edmx</DependentUpon>
+      <LastGenOutput>AXMBSBIDA.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AXMBSBIDA.edmx.diagram">
+      <DependentUpon>AXMBSBIDA.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\AXMBSBIDA.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AXMBSBIDA.edmx</DependentUpon>
+      <LastGenOutput>AXMBSBIDA.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -307,6 +359,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
